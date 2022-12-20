@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css\style.css">
+
+    <title>Document</title>
+    <!----------------------------------mainfest-icon---------------------------------->
+    <link rel="apple-touch-icon" sizes="180x180" href="images\common-images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images\common-images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images\common-images/favicon-16x16.png">
+    <link rel="manifest" href="images\common-images/site.webmanifest">
+    <link rel="mask-icon" href="images\common-images/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="images\common-images/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="images\common-images/browserconfig.xml">
+    <meta name="theme-color" content="#bbb5b5">
+</head>
+
+<body>
+    <header id="slider">
+        <ul id="slideWrap">
+            <li><img src="images/Booking-img/gallery-4.jpg" alt=""></li>
+
+            <li><img src="images/Booking-img/gallery-1.jpg" alt=""></li>
+            <li><img src="images/Booking-img/gallery-2.jpg" alt=""></li>
+            <li><img src="images/Booking-img/gallery-3.jpg" alt=""></li>
+
+            <li><img src="images/Booking-img/gallery-6.jpg" alt=""></li>
+        </ul>
+
+        <a id="prev" href="#">&#8810;</a>
+        <a id="next" href="#">&#8811;</a>
+    </header>
+    <nav class="book-nav">
+        <a href="index.html"> <img src="images/common-images/logo.jpg" class="logo"></a>
+        <div class="nav-link">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Tea-plantations.html">Tea Plantations</a></li>
+                <li class="active"><a href="tea-museum.html">Ceylon Tea Museum</a></li>
+                <li><a href="ByproductsOfTea.html">By products of Tea</a></li>
+                <li><a href="">Tea Sales <i class="arrow-down"></i> </a>
+                    <ul>
+                        <li><a href="sales1.html">Steuarts Tea</a></li>
+                        <li><a target="_blank" href="sales2.html">Dilma Tea</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="Purchase-and-Donations.html">Purchase and donations</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="textbox-book">
+        <h1>Train Ride Through Ceylon Tea Trails
+        </h1><br>
+        <p>
+            Visit Ceylon Tea Museum
+        </p><br>
+        <a href="#mainid" class="hero-btn">Explore</a>
+    </div>
+    <main id="mainid" class="maincontainer">
+        <div class="progressBar" id="pbleft"></div>
+        <div class="progressBar" id="pbright"></div>
+
+        <!-------------------------------------Form--------------------------->
+        <div class="form__body">
+            <form  class="form" id="form">
+
+
+                <div class="form__title">When do you plan to visit us?</div>
+
+                <!---------------------------------date picker---------------------------------->
+                <div class="form__item">
+                    <label for="date" class="form__label">Pick a date for your visit..</label>
+
+                    <input type="date" class="form__input form__input__small " name="date" id="datep"
+                        placeholder="pick a date "  >
+                </div>
+                <!---------------------------------------Full Name----------------------------------------->
+                <div class="form__title">Tell us more abot your-self </div>
+                <div class="persoal__details">
+                    <div class="form__item " id="name">
+                        <label for="fullName" class="form__label">Full Name </label>
+                        <small id="txt">Same as on your ID</small>
+                        <input type="text" class="form__input " name="FullName" id="fullName"
+                            placeholder="Enter your Full Name" required>
+                        <small>Error messege </small>
+
+                    </div>
+                    <!----------------------Mobile Number -------------------------------------------------------->
+
+                    <div class="form__item" id="mnumber">
+                        <label for="mobnum" class="form__label" >Mobile Number </label>
+                        <small id="txt">We may reach out for booking updates here over SMS/Watsapp </small>
+                        <input type="tel" class="form__input form__input__small " name="mobnum" id="mobnum"
+                            placeholder="" required minlength="10" maxlength="10">
+                            <small>Error messege </small>
+
+                    </div>
+                    <!---------------------------Email and confirmation ------------------->
+
+                    <div class="form__item " id="Email">
+                        <label for="email" class="form__label" >E-mail </label>
+                        <small id="txt">We'll send your tickets here </small>
+                        <input type="text" class="form__input " name="email" id="email" placeholder="Enter your E-mail"
+                            required>
+                            <small>Error messege </small>
+
+                    </div>
+                    <div class="form__item" id="CEmail">
+                        <label for="email-conf" class="form__label" >Confirm E-mail </label>
+                        <small id="txt">Just to ensure we've got this right </small>
+                        <input type="text" class="form__input " name="email-conf" id="email-conf"
+                            placeholder="Re-enter your E-mail" required>
+                            <small>Error messege </small>
+
+
+                    </div>
+                </div>
+
+           
+
+
+            
+
+            <!------------------------------------------number of guests------------------------------------------>
+            <h1 class="guests ">Who are you coming with ?</h1>
+            <div class="person-count">
+                <div class="person">Adult (Foreign)<br><small class="sm_count">Above 15 years</small></div>
+                <div class="counter">
+                    <div class="count-btn"><button class="dec" id="adult-dec" type ="button">-</button></div>
+                    <div class="num_of_ppl" id="FAdult_count" >2</div>
+                    <div class="count-btn"><button class="inc" id="adult-inc" type="button">+</button></div>
+                </div>
+            </div>
+            <div class="person-count">
+                <div class="person">Child (Foreign)<br><small class="sm_count">5 to 14  years</small></div>
+                <div class="counter">
+                    <div class="count-btn"><button class="dec" id="child-dec" type="button">-</button></div>
+                    <div class="num_of_ppl" id="FChild_count">0</div>
+                    <div class="count-btn"><button class="inc" id="child-inc" type="button">+</button></div>
+                </div>
+            </div>
+            <div class="person-count">
+                <div class="person">Infant<br><small class="sm_count">Under 4 years</small></div>
+                <div class="counter">
+                    <div class="count-btn"><button class="dec" id="infant-dec" type="button">-</button></div>
+                    <div class="num_of_ppl" id="Inf_count">0</div>
+                    <div class="count-btn"><button class="inc" id="infant-inc" type="button">+</button></div>
+                </div>
+            </div>
+            <div class="person-count">
+                <div class="person">Adult (Local)</div>
+                
+                <div class="counter">
+                    <div class="count-btn"><button class="dec" id="SL-adult-dec" type="button">-</button></div>
+                    <div class="num_of_ppl"  id = LAdult_count   >0</div>
+                    <div class="count-btn"><button class="inc" id="SL-adult-inc" type="button">+</button></div>
+                    
+                </div>
+            </div>
+            <div class="person-count">
+                <div class="person">Child (Local)</div>
+                <div class="counter">
+                    <div class="count-btn"><button class="dec" id="SL-child-dec" type="button">-</button></div>
+                    <div class="num_of_ppl" id="LChild_count">0</div>
+                    <div class="count-btn"><button class="inc" id="SL-child-inc" type="button">+</button></div>
+                </div>
+            </div>
+            <!-------------Duration---------->
+            <div class="bottomn__flex">
+            <p class="duration__p">
+                <label for="duration" class="lb-duration">Select your visit duration </label>
+                <select id="duration" name="duration" class="duration" >
+                    <option value="3h" selected class="opt">3 hrs</option>
+                    <option value="1/2fday" class="opt">1/2 day</option>
+                    <option value="fullday" class="opt">Full day </option>
+                </select>
+            </p>
+            <label class="order__summary_lb"> Current order Summary:</label>
+            <p class="order__sum" id="current_order__sum">
+            
+        </div>
+        <button class="Add_order" id="Add_order" type="submit">Add to order</button>
+    </form>
+   </p><br><br>
+   <div class="fav_flex">
+    <div>   <p class="order__summary_lb"> Overoll order Summary:</p>
+            <p class="order__sum" id="order__sum"></p>
+            </div>
+            <button class="add_to_fav" id="add_to_fav" type="button">Add to favourite </button>
+            <button class="order_favourite" id="order_favourite" type="button">Order Favourite </button>
+            </div>
+            <div class="fav_flex">
+                <button class="place__order" id="place_order"type="submit">Place order</button>
+            <button class="loyality" id="loyality">Check Loyality</button>
+            </div>
+        
+        </div>
+
+ <!------------------------------------Footer------------------------------------>
+ <footer>
+    <div class="footercols">
+        <div class="col col1">
+           <a href="index.html"><img class="footer_logo" src="images/common-images/transparent logo.png"></a>
+        </div>
+        <div class="col col2">
+            <ul>
+                
+                    <h3>Quick Links <div class="underline"><span></span></div>
+                    </h3>
+                
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Tea-plantations.html"Tea Plantations></a> </li>
+                <li><a href="tea-museum.html">Ceylon Tea Musuem</a></li>
+                <li><a href="ByproductsOfTea.html">By products of Ceylon Tea</a></li>
+                <li><a href="sales1.html">Steuarts Tea</a></li>
+                <li><a target="_blank" href="sales2.html">Dilma Tea</a></li>
+                <li><a href="Purchase-and-Donations.html">Purchase and donations</a></li>
+            </ul>
+        </div>
+        <div class="col col3">
+            <ul>
+                
+                    <h3>More information<div class="underline"><span></span></div>
+                    </h3>
+                
+                <li><a href="http://plantationindustries.gov.lk/">Mnistry of Plantation</a></li>
+                <li><a href="http://www.tri.lk/">Tea Research Institue of Sri Lanka </a></li>
+                <li><a href="https://tshda.lk/">Tea Small Holdingd Development Authority</a></li>
+            </ul>
+        </div>
+        <div class="col col4">
+            <ul>
+                <h3>Reach us via<div class="underline"><span></span></div>
+                </h3>
+                <li><a href="https://www.facebook.com/Srilankateaboard/"><img
+                            src="images/common-images/facebook.png"></a></li>
+                <li><a href="https://twitter.com/SLTeaBoard"><img src="images/common-images/twitter.png"></a></li>
+                <li><a href="https://www.instagram.com/slteaboard"><img src="images/common-images/instagram.png"
+                            alt=""></a></li>
+                <li><a href="https://www.youtube.com/channel/UC_ZBCtYgMiknB47TBKxqdjw/"><img
+                            src="images/common-images/yt.png"></a></li>
+                <li><a href="https://www.linkedin.com/company/Srilankateaboard/"><img
+                            src="images/common-images/linkdin.png" alt=""></a></li>
+            </ul>
+        </div>
+
+    </div>
+    <div id="copyright">
+        <h4>Copyright © Dinuri Senara 2022</h4>
+    </div>
+<!-------------------------------------Go TO The Top button------------------------------------------------------------------------------------------------------------------------------------------------------>
+<a href="#" class="totop">&#11014;&#65039;</a>
+</main>
+<!--------------------------------------Referencing----------------------------------------->
+<!--Ceylonteamuseum.com. 2022. Ceylon Tea Museum. [online] Available at: <https://www.ceylonteamuseum.com/the-museum.html> [Accessed 27 July 2022].-->
+</footer>
+ <script src="main.js"></script>
+
+
+</body>
+
+</html>

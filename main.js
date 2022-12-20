@@ -287,7 +287,10 @@ function add_order() {
     alert("Please fill out all the feilds ")
 
   }
-  else {
+  else if(pricecalc() == 0 ){
+    alert("Please Select the number of guests ")
+  }
+  else{
 
     order__sum.innerText = `Reservation Name:  ${fullName.value} \n
     Reserved Date ${date.value} \n\n Reserved Tickets:  \n 

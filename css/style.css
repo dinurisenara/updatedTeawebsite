@@ -1,0 +1,1837 @@
+:root {
+    --white: rgb(252, 252, 252);
+    --black: #000;
+    --green:#0d524466;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior:smooth;
+    
+    
+
+
+}
+/*-------------------------------------------Landing content-----------------------------------------------------------------------------*/
+.logo {
+    border-radius: 10px;    
+}
+.header {
+    min-height: 100vh;
+    min-width: 95vw;    
+    background-image: linear-gradient(rgba(4, 9, 30, 0.45), rgba(4, 9, 30, 0.7)), url(../images/homepage/compressed/main.webp);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+
+
+nav {
+    width: 80;
+    top: 0;
+    position: absolute;
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+
+}
+
+nav img {
+    width: 150px;
+}
+
+.nav-link {
+    padding-left: 45px;
+    flex: 3;
+    text-align: right;
+}
+
+.nav-link ul li {
+    margin: 0px;
+    list-style: none;
+    padding: 8px 12px;
+    position: relative;
+}
+
+
+
+.nav-link>ul>li {
+    padding: 14.5px;
+    float: left;
+}
+
+
+.nav-link ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.arrow-down {
+
+    position: relative;
+    border: solid var(--white);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.active{
+     
+    content: '';
+    border-radius: 14px;    
+    background: #e3e0e04f; 
+}
+
+
+.nav-link ul li ::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #e3e0e074;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+
+}
+
+.nav-link ul li :hover::after {
+    width: 100%;
+}
+
+.nav-link ul ul {
+    position: absolute;
+    text-align: left;
+    padding: 0;
+    min-width: 160px;
+    display: none;
+    top: 100%;
+    left: 0;
+}
+
+.nav-link ul li:hover>ul {
+    display: block;
+}
+
+
+.textbox {
+    width: 90%;
+    color: var(--white);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;  
+
+}
+
+.textbox h1 {
+    font-size: 70px;
+    padding-bottom: 20px;
+}
+
+.textbox p {
+    margin: 10px 0 40px;
+    font-size: 19px;
+    color: var(--white);
+    width: 80%;
+    transform: translate(14%, -20%);
+    
+    
+}
+
+.hero-btn {
+
+    display: inline-block;
+    border-radius: 12px;
+    text-decoration: none;
+    color: var(--white);
+    border: 1px solid var(--white);
+    padding: 12px 34px;
+    font-size: 23px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    align-self: center;
+
+}
+
+.hero-btn:hover {
+    border: 1px solid #bbb5b5;
+    color: #000;
+    background: #bbb5b570;
+    transition: 0.5s;
+}
+/*--------------------------------Navigation mobile compatability----------------------*/     
+@media only screen and (max-device-width: 725px ){
+    nav {
+        width: 80;
+        top: 0;
+        position: absolute;
+        display: flex;
+        flex-flow: column wrap;
+        padding: 2% 6%;
+        justify-content: space-between;
+        align-items: center;
+        gap: 50px;
+    }
+
+
+    .nav-link ul li {
+            margin: 0px;
+            list-style: none;
+            padding: 8px 12px;
+            position: relative;
+            width: 25%;
+            text-align: left;
+        }
+        
+        
+        
+        .nav-link>ul>li {
+            padding: 14.5px;
+            
+        }
+        
+        
+        .nav-link ul li a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 20px;
+        }   
+        
+        
+        .nav-link ul ul {
+            position: absolute;
+            text-align: left;
+            padding: 0;
+            min-width: 160px;
+            display: none;
+            top: 100%;
+            left: 0;
+        }
+        
+       
+        
+        
+        .textbox {
+            width: 90%;
+            color: var(--white);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;  
+        
+        }
+        
+        .textbox h1 {
+            font-size: 70px;
+            padding-bottom: 20px;
+        }
+        
+        .textbox p {
+            margin: 10px 0 40px;
+            font-size: 19px;
+            color: var(--white);
+            width: 80%;
+            transform: translate(14%, -20%);
+            
+            
+        }
+        
+        .hero-btn {
+        
+            display: inline-block;
+            border-radius: 12px;
+            text-decoration: none;
+            color: var(--white);
+            border: 1px solid var(--white);
+            padding: 12px 34px;
+            font-size: 43px;
+            background: transparent;
+            position: relative;
+            cursor: pointer;
+            align-self: center;
+        
+        }
+        
+       .logo{
+        width: 110%;
+       }
+    
+    }
+
+/*-----------------------------------------------------------------------------------------*/
+main {
+    padding: 10px;
+}
+.maincontainer {
+    
+    background-image:url(../images/common-images/leaf-bg.svg);
+   
+    background-size: 800px auto;
+}
+.container1 {
+    position: relative;
+    top: 15px;
+    border: none;
+    padding: 2em;
+    max-width: 100vw;
+    
+}
+
+/*-------------------------------------------progressBar---------------------------------------*/
+.progressBar {
+    position: fixed;
+    top: 0;    
+    width: 10px;
+    height: 100%;
+    background: linear-gradient(to top, #004f80, #fff700);
+   filter: blur(3px);
+    z-index: -100;
+}
+#pbright{
+    right: 0;
+    z-index: -100;
+}
+#pbleft{
+    left: 0;
+    z-index: -100;
+}
+
+
+  /*--------------------Section 1 sub section 1 what is ceylon tea ----------------------------*/  
+
+
+.heading1 {
+    position: relative;
+    
+    
+    padding: 50px;
+    font-size: 52px;
+    
+}
+.box  {
+    
+    border-radius: 14px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.359), 0 10px 10px rgba(0,0,0,0.22);
+   background: linear-gradient(rgba(1, 31, 6, 0.574),rgba(51, 76, 10, 0.625), rgba(60, 71, 16, 0.384),rgba(79, 114, 18, 0.153));
+}
+
+
+.image1 {
+    height: 18.5em;   
+    padding: 2em;
+    float: left;
+    border-radius: 50px;    
+}
+#para1 {
+    border: none;
+    padding: 2em;    
+    border-radius: 14px;
+    font-size: 24px;    
+    position: relative;  
+   
+}
+.divider{
+    background-image: url(../images/common-images/seperators-3.png) ; 
+     
+        border-top: none;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+        margin: 1.5rem 0;
+        background-position: 50%;
+        background-repeat: no-repeat;
+        -webkit-background-size: 50% auto;
+        -moz-background-size: 90% auto;
+        background-size: 50% auto;
+    
+}
+/*------------------------------Section 1 sub section2 why ceylon tea-------------------------------------*/
+.box2{
+    
+    border-radius: 14px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.359), 0 10px 10px rgba(0,0,0,0.22);
+    background: linear-gradient(rgba(1, 31, 6, 0.574),rgba(51, 76, 10, 0.625), rgba(60, 71, 16, 0.384),rgba(79, 114, 18, 0.153));
+
+}
+#sub-2-img{
+    height: 18.5em;   
+    padding: 2em;
+    float: right; 
+    border-radius: 72px;
+    
+}
+.heading2 {
+    
+    position: relative;   
+    padding: 50px;
+    font-size: 52px;
+    
+    
+}
+.para2 {   
+    border: none;
+    padding: 1em;    
+    border-radius: 14px;
+    font-size: 23px;    
+    position: relative;
+    text-align: center;
+    
+}
+
+.ul2 {
+    position: relative;
+    list-style: url(../images/homepage/listicon.png);   
+    font-size: 20px;
+    padding: 100px;   
+}
+/*------------------Story of ceylon tea ------------------------------*/
+.box3{
+    border-radius: 14px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.359), 0 10px 10px rgba(0,0,0,0.22);
+    background: linear-gradient(rgba(1, 31, 6, 0.574),rgba(51, 76, 10, 0.625), rgba(60, 71, 16, 0.384),rgba(79, 114, 18, 0.153));
+    
+   
+}
+.heading3{   
+    font-size: 52px;    
+    position: relative;    
+    padding: 50px;    
+    left: 50px;
+    color: rgb(11, 11, 11);
+   
+}
+.image-4{   
+     border-radius: 60px;
+    height: 18.5em;   
+    padding: 2em;
+    float: right;   
+     
+    
+}
+
+.container2{
+    position: relative;
+    top: 15px;
+    border: none;
+    padding: 2em;
+    max-width: 92vw;
+    background-position: 50%;
+}
+.para3{
+    border: none;
+    padding: 2em;    
+    border-radius: 14px;
+    font-size: 24px;    
+    position: relative;
+    
+}
+/*--------------------------Varieties of ceylon tea section 3-----------------------------------*/
+.teafleximg{
+    height: 150px;
+    border-radius: 14px;
+    padding: 30px;
+    float:left;
+}
+.box4{   
+    border-radius: 14px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.359), 0 10px 10px rgba(0,0,0,0.22);
+    width: 92vw;  
+    overflow: hidden;  
+    background: linear-gradient(rgba(1, 31, 6, 0.574),rgba(51, 76, 10, 0.625), rgba(60, 71, 16, 0.384),rgba(79, 114, 18, 0.153));
+}
+
+.heading4{
+    
+    position: relative;   
+    padding: 50px;
+    font-size: 52px;
+    
+ 
+}
+.image-5{
+   
+    width: 20em;
+    position: relative;
+    border-radius: 70px;
+    float: right;
+    bottom: 40px;
+    padding: 50px;    
+}
+.para4{
+    
+    border: none;    
+    background-color: rgba(255, 224, 179, 0.1);
+    border-radius: 14px;
+    font-size: 20px;
+    position: relative;
+    width:900px;
+    padding: 25px;
+    transform: translate(5%,0%);
+    
+    
+}
+.ol-1 {
+    list-style-position: outside;
+    font-size: 20px;
+    position: relative;    
+    width: fit-content;       
+    left: 200px;  
+    top: 50px;
+    font-size: 30px;    
+}
+.ol-1 > li{
+    padding : 10px;
+}
+.container-0{
+    
+   
+    position: relative;
+    flex-flow: column ;
+    justify-content: space-evenly;
+    row-gap: 50px;
+    top: 80px;
+    max-width: 100vw;
+    display: flex;
+    padding: 100px;
+    
+    
+    
+       
+}
+#container-1{
+    padding: 30px;
+    background-color: rgba(43, 60, 30, 0.137);
+    width: auto;
+    height: fit-content;
+    border-radius: 14px;
+    font-size: 20px;
+    
+    
+    
+    
+    
+}
+
+#flexheading{
+    
+    padding: 20px;    
+}
+/*------------------------------footer ---------------------------------------*/
+footer{
+    
+    position:relative;
+    top: 50px;
+    width: 100%;
+    height: 300px;
+    bottom: 0;
+    background: linear-gradient(rgba(51, 87, 25, 0.47), rgba(62, 118, 134, 0.7)), url(../images/HOME/leaf-2.svg);
+    color: rgb(13, 12, 12);
+    padding: 100px 0 30px;
+    font-size: 17px;
+    line-height: 20px;
+    
+    
+
+}
+.footercols{
+ width: 85%;
+ margin: auto;
+ display: flex;
+ flex-wrap: wrap;
+ align-items: flex-start;
+ justify-content: space-between;
+ padding-bottom: 20px;
+}
+.col{
+   flex-basis: 20%;
+   padding: 10px;
+   
+}
+.col1{
+    width: 80px;
+    margin-bottom: 30px;
+}
+.col2 h3 , .col3 h3 , .col4 h3{
+   width: fit-content;
+   margin-bottom: 25px;
+   position: relative;
+}
+.col2 ul  , .col3 ul , .col4 ul{
+    list-style: none;
+    
+    
+}
+
+.col4 ul li {
+    float: left;
+    padding: 10px;
+    
+   
+    
+}
+.col1 ul >li>a , .col2 ul >li>a , .col3 ul > li>a{
+    
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: black;   
+}
+.col1 ul >li, .col2 ul >li, .col3 ul > li{
+    padding: 4px;
+}
+.col1 >ul >li>a :hover, .col2 >ul >li>a:hover , .col3 >ul > li :hover{
+   padding-left: 10px;
+}
+
+.underline{
+    width: 100%;
+    height: 5px;
+    background: #0206523b;
+    border-radius: 3px;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    overflow: hidden;
+    
+}
+.underline span {
+    width: 15px;
+    height: 100%;
+    background:#020e3b9c;
+    border-radius: 3px;
+    position: absolute;
+    top:0;
+    left: 10px;
+    animation: moving 2s linear infinite;
+}
+@keyframes moving {
+    0% {
+        left:-30%;
+    }
+    100%{
+        left: 100px;
+    }
+}
+#copyright{
+    text-align: center;
+}
+@media (max-width: 700px){
+    footer{
+        bottom:unset;
+    }
+    .col{
+        flex-basis: 100%;
+    }
+    
+}
+/*-----------------------Ceylon tea museum -------------------*/
+.header-mu{
+    min-height: 100vh;
+    max-width: 100vw;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.281),rgba(4, 9, 30, 0.314)), url(../images/tea-musuem/img_01.webp);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    animation: change 20s infinite ;
+}
+@keyframes change {
+    0% 
+    {
+        background-image: linear-gradient(rgba(4, 9, 30, 0.45), rgba(4, 9, 30, 0.7)),url(../images/tea-musuem/mu11.webp) ;
+    }
+    25% 
+    {
+        background-image:linear-gradient(rgba(4, 9, 30, 0.45), rgba(4, 9, 30, 0.7)), url(../images/tea-musuem/mu10.webp);
+    }
+    50% 
+    {
+        background-image: linear-gradient(rgba(4, 9, 30, 0.45), rgba(4, 9, 30, 0.7)),url(../images/tea-musuem/img_01.webp);
+    }
+    75% 
+    {
+        background-image: linear-gradient(rgba(4, 9, 30, 0.45), rgba(4, 9, 30, 0.7)),url(../images/tea-musuem/tea\ mu.webp);
+    }
+    100% 
+    {
+        background-image: linear-gradient(rgba(4, 9, 30, 0.45), rgba(4, 9, 30, 0.7)),url(../images/tea-musuem/mu1.webp);
+    }
+}
+
+.muheding-1{
+    position: relative;   
+    padding: 50px;
+    font-size: 52px;    
+}
+
+
+
+
+#muimg-1  {
+    width: 35vw;  
+    padding-right: 30px;  
+    float: right;
+}
+
+#muimg-2{
+    width: 30vw;
+    padding: 30px;
+}
+@media only screen and (max-device-width: 1000px ){
+    #muimg-2{
+        width: 20vw;
+        padding: 30px;
+    } 
+
+}
+
+    
+
+#muimg-3{
+    width: auto;
+    height: 18em;
+    padding: 20px;
+    
+}
+
+
+
+.mu-para-1 , .mu-para-2 {
+  
+    
+    box-shadow:0 14px 28px rgba(0, 0, 0, 0.359), 0 10px 10px rgba(0,0,0,0.22);
+    width: 45%;
+    padding: 2em;
+    left: 30px;
+    border-radius: 14px;
+    font-size: 20px;    
+    position: relative; 
+    background: linear-gradient(to right, rgba(80, 107, 17, 0.238), rgba(111, 99, 13, 0.359),rgba(67, 60, 7, 0.37));
+    
+    
+}
+.mu-para-2{
+    width: 60%;
+    top: 30px;
+    padding: 30px;
+    height: fit-content;
+}
+
+.muheding-2{
+    position: relative;
+    top: 50px;  
+   
+    padding: 50px;
+    font-size: 52px;
+}
+.mu-container2{
+    display: flex;
+    flex-flow: row;
+    max-width: 100vw;
+    justify-content:space-around;
+    background-color: linear-gradient(rgba(4, 9, 30, 0.45), rgba(4, 9, 30, 0.7));
+    
+}
+.mu-mapcontainer{
+    
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+
+
+.map{
+    padding: 30px;
+    top: 50px;
+    position: relative;
+    margin: 20px}
+    #booking{
+        font-size: 20px;
+        font-weight: 600;
+        height: 70px;
+        width: 200px;
+        color: #333;
+        background-color: #a2ad2a;
+        position: relative;
+        transform:translate(650px , 0px)
+    
+    
+    }
+    #booking:hover {
+        background-color: #b1bb49ed;
+        cursor: pointer;
+    }
+    @media only screen and (max-device-width: 720px ){
+        #booking{
+            transform:translate(350px , 45px)
+        }
+    
+    }
+/*-----------------------------------Ceylon tea plantations----------------------------------*/
+.header-pl{
+    min-height: 100vh;
+    max-width: 100vw;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.45), rgba(4, 9, 30, 0.7));
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.bg-videopl{
+    position:absolute ;
+    bottom: 0;
+    width: fit-content;
+    z-index: -1;
+}
+@media (min-aspect-ratio:16/9){
+    .bg-videopl{
+        width: 100%;
+        height: auto;        
+    }
+    .header-pl{
+        width: 100%;
+        height: auto;
+    }
+}
+@media(max-aspect-ratio: 16/9){
+    .bg-videopl{
+        width:auto;
+        height: 100%;
+        
+    }
+    .header-pl{
+        width: auto;
+        height: 100%;
+        overflow: hidden;
+    }
+}
+/*------------------Tea plantations in Sri Lanka -------------------*/
+.pl-box{
+   
+    width: 95%;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.359), 0 10px 10px rgba(0,0,0,0.22);
+    background: linear-gradient(to left,rgba(1, 31, 6, 0.701),rgba(51, 76, 10, 0.625), rgba(60, 71, 16, 0.384),rgba(79, 114, 18, 0.153));
+}
+.pl-para1{
+    text-align: center;
+    font-size: 18px;
+    padding: 30px;
+}
+.pl-flex{
+    display: flex;
+    row-gap: 40px;
+    flex-flow: column wrap;
+    align-self: center;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+
+.plantation-1{
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    padding-bottom: 50px;
+    flex-flow: row wrap;
+    
+}
+
+
+.plimg-1{
+    width: 100px;
+    float: left;
+    padding-left: 50px;
+    padding-right: 30px
+}
+.plimg-2{
+    padding: 50px;
+    width: 500px;    
+}
+.pl-heading{
+    padding: 30px;
+    font-size: 40px;
+}
+.pl-para2{
+    width: 20%;
+    padding-top: 50px;
+    font-size: 19px;
+}
+.map-pl-1{
+padding-right: 30px;
+padding-left: 30px;
+
+}
+
+table{
+   
+    background-color: var(--green);    
+    border-collapse: collapse;
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+    
+    
+    
+}
+
+#tbul{
+    list-style: none;
+}
+
+table, th, td {
+    
+    
+    height: 50px;
+  vertical-align: center;
+  padding: 15px;
+  }
+ thead ,tfoot{
+    background-color: #29503f93;
+ }
+
+ tr:hover {background-color: rgba(82, 114, 40, 0.432);}
+ /*-------------------------mobile compatability---------------------*/
+ @media only screen and (max-device-width: 1423px){
+    .plimg-2{
+        width: 80%;
+        height: auto;       
+    }
+    .plantation-1{
+        display: flex;
+        justify-content: space-between;
+        overflow: hidden;
+        padding-bottom: 50px;
+        flex-flow: column wrap;
+        
+    }
+    .pl-para2{
+        width: 90%;
+        align-self: center;
+        font-size: 20px;
+    }
+    .map-pl-1{
+        padding: 20px;
+        
+        
+        align-self: center;
+        margin-top: 30px;
+    }
+    .textbox{
+        padding: 20px;
+            }
+    .textbox > p{
+        font-size: 20px;
+        
+       
+    }
+    .textbox >h1{
+        font-size: 50px;
+    }
+
+}
+
+@media (min-aspect-ratio: 16/9){
+    video {
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-aspect-ratio: 16/9){
+    video {
+        width: auto;
+        height: 100%;
+    }
+}
+@media only screen and (max-device-width: 720px) { 
+    html,body {
+        width: 100vw;
+        min-height: 100vh;
+        overflow-x: hidden;
+    }
+    .home-background {
+        max-width: 100vw;
+        width: auto;
+        height: 60vh;
+        position: relative;
+        padding: 0 5%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow-x: hidden;
+    }
+    
+    .video-nav {
+        width: 90%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 10px 10px;
+        padding-right: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .video-nav ul li {
+        
+        list-style: none;
+        display: inline-block;
+        margin-left: 30px;
+        font-size: 14px;
+    }
+    .video-nav .video-nav-logo {
+        width: 60px;
+        border-radius: 100%;
+    }
+    
+    .video-page-topic h1 {
+        
+        font-size: 22px;
+        color: #333;
+        font-weight: 700;
+        transition: 1s;
+    }
+    .video-page-topic a {
+        text-decoration: none;
+        display: inline-block;
+        color: #fff;
+        font-size: 16px;
+        border: 2px solid #fff;
+        padding: 14px 70px;
+        border-radius: 50px;
+        margin-top: 20px;
+    }
+    .mu-box{
+        display: flex;
+        flex-flow: column;
+        position: relative;
+    } 
+    #muimg-1{
+        width: 80%;
+        height: auto;
+        align-self: center;
+    }
+    .mu-para-1,.mu-para-2{
+       width: 80%;
+       margin-top: 30px;
+       align-self: center;
+       padding: 40px;
+    }
+    .mu-mapcontainer{
+        display: flex;
+        flex-flow: column;
+        position: relative;
+    
+    }
+    .map{
+        align-self: center;
+    }
+
+    }
+    
+
+ 
+
+ /*-------------------------------------------------By Products of Tea------------------------------------------------*/
+ .headerby{
+    min-height: 100vh;
+    max-width: 100vw;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.45), rgba(4, 9, 30, 0.7)), url(../images/by-products-of-tea/bg-image.webp);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    
+ }
+ .bp{
+    display: flex;
+    
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+ }
+ .bp1{
+    
+    
+    width: 40%;
+    height: 700px;
+    margin: 16px;
+    box-sizing: border-box;
+    float: left;
+    text-align: center;
+    border-radius: 20px;
+    
+    padding-top: 30px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    transition: 0.4s;
+    background: linear-gradient(rgba(67, 34, 17, 0.248), rgba(111, 106, 13, 0.253),rgba(54, 80, 8, 0.188));
+ }
+ .bp1:hover{
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16),0 3px 6px rgba(0,0,0,0.23);
+    transform: scale(1);
+ }
+ .bpimg{
+    padding: 20px;
+    padding-bottom: 5px;
+    height: 250px;
+    width: auto;    
+ }
+ .bp-para{
+    padding: 30px;
+    text-align: left;
+    font-size: 20px;
+    color: var(--black);
+ }
+ .bp-headings{
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+ }
+ button{
+    padding: 20px;
+    background-color: rgba(76, 106, 12, 0.307);
+    color: whitesmoke;
+    border-radius: 19px;
+    font-size: 18px;
+    border: none;
+ }
+ .wb{
+    text-decoration: none;
+    color: black;
+ }
+ @media only screen and (max-device-width: 1400px ){
+    .bp1{
+    
+    
+        width: 80%;
+        height: 700px;
+        margin: 16px;
+        box-sizing: border-box;
+        float: left;
+        text-align: center;
+        border-radius: 20px;
+        
+        padding-top: 30px;
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+        transition: 0.4s;
+        background: linear-gradient(rgba(67, 34, 17, 0.248), rgba(111, 106, 13, 0.253),rgba(54, 80, 8, 0.188));
+     }
+}
+ /*---------------------------Purchase ad Donatioins--------------------------------------------------------------*/
+ #don{
+    padding-top: 100px;
+    font-size:32px ;    
+ }
+ .donations-all-btns {
+    text-align: center;
+    padding: 5px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    row-gap: 30px;
+    column-gap: 40px;
+}
+.donations-all-btns a {
+    text-decoration: none;
+   box-sizing: border-box;
+    width: 40%;
+    
+    background: linear-gradient(rgba(67, 34, 17, 0.748), rgba(111, 106, 13, 0.629),rgba(54, 80, 8, 0.464));;
+    padding: 10px ;
+    color: var(--black);
+}
+.donations-all-btns a:hover {
+    transform: scale(1.1);
+    background-color: #88782a;
+    color: #f2f2f2;
+}
+.other-products-paras {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px;
+}
+.other-products-paras h2 {
+    font-weight: 700;
+    font-size: 50px;
+    padding-bottom: 30px;
+}
+.other-products-paras h3 {
+    font-weight: 500;
+    padding-top: 15px;
+    font-size: 30px;
+}
+.other-products-paras p {
+    width: 100%;
+}
+.side-img-pd {
+    padding: 0px 5px;
+    margin: 10px;
+    width: 280px;
+    max-width: 300px;
+    height: 180px;
+    display: block;
+    float: left;
+    border-radius: 15px;                   
+    background-repeat: no-repeat;
+}
+.purchase-btn {
+    text-decoration: none;
+    padding: 10px;
+    background-color: #333;
+    color: #f2f2f2;
+    transition: 1s;
+    border-radius: 2px;
+}
+.purchase-btn:hover {
+    background-color: #a2ad2a;
+    color: #fff;
+}
+
+
+/*--------- Go To The Top Button---------*/
+.totop {
+    
+   
+    background-repeat: no-repeat;
+    position: fixed;
+    width: 50px;
+    height: auto;
+    background-color: transparent;
+    bottom: 40px;
+    right: 50px;
+    text-decoration: none;
+    text-align: center;
+    line-height: 50px;
+    
+    
+}
+/*----------------------------Booking page ------------------------------------------*/
+.header-booking{
+    min-height: 100vh;
+    max-width: 100vw;
+    
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    animation: change-2 20s infinite ;
+}
+
+.book-nav{
+    background :linear-gradient(rgba(4, 9, 30, 0.55), rgba(4, 9, 30, 0.45),rgba(4, 9, 30, 0.35), rgba(4, 9, 30, 0.1));
+    padding-bottom: 10px;
+    width: 88%;
+    
+}
+.textbox-book {
+    width: 88%;
+    color: var(--white);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;  
+    padding-bottom:20px ;
+    background: linear-gradient(to right,rgba(4, 9, 30, 0.0),rgba(4, 9, 30, 0.45),rgba(4, 9, 30, 0.2),rgba(4, 9, 30, 0.0));
+
+}
+
+.textbox-book h1 {
+    font-size: 50px;
+    padding-bottom: 20px;
+    font-style: italic;
+}
+
+.textbox-book p {
+    margin: 10px 0 40px;
+    font-size: 19px;
+    color: var(--white);
+    width: 80%;
+    transform: translate(14%, -20%);
+    
+    
+}
+/*-----------------------------Image slider ----------------------------------*/
+#slider {
+    position: relative;
+    width: 98.5vw;
+    height: 100vh;
+  
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+  }
+  #slider ul {
+    position: relative;
+    list-style: none;
+    height: 100%;
+    width: 10000%;
+    padding: 0;
+    margin: 0;
+    transition: all 750ms ease;
+    left: 0;
+  }
+  #slider ul li {
+    position: relative;
+    height: 100%;
+  
+    float: left;
+  }
+  #slider ul li img{
+    width: 98.5vw;
+    height: 100vh;
+  }
+  #slider #prev, #slider #next {
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    position: absolute;
+    top: 50%;
+    border-radius: 50%;
+    font-size: 2rem;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    transform: translateY(-50%);
+    transition: all 150ms ease;
+  }
+  #slider #prev {
+    left: 10px;
+  }
+  #slider #next {
+    right: 10px;
+  }
+  
+  #slider #prev:hover, #slider #next:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    text-shadow: 0;
+  }
+  /*---------------------------------Form styling-------------------------------------------------------*/
+  .form__body{
+    padding: 40px;
+    width: 75vw;
+   margin-left:7.75vw;
+    background-color: rgba(51, 51, 51, 0.08);
+    border-radius: 30px;
+    padding-bottom: 70px;
+  
+  }
+  
+  .form{
+    font-family:  'Poppins', sans-serif;;
+    font-size: 16px;
+
+  }
+  .form *{
+    box-sizing: border-box;
+    line-height: 1.5;
+  }
+  .form__title{
+    font-size: 2em;
+    font-weight: 600;
+    padding-top:25px ;
+  }
+  .form__item{
+    display: flex;
+    flex-direction: column;
+    margin-right: 50px;
+    width: 25vw;
+   
+
+  }
+  .form__item >*{
+    align-self: flex-start;
+  }
+  .form__label{
+    font-weight: 600;
+    padding: 18px 0;
+  }
+  .form__input{
+    -webkit-appearance :none ;
+    width: 25vw;
+    min-width: 200px;
+    max-width: 435px;
+
+    /* Fix for safari/ ios fields */  
+    /* The actual input type of date fields dont have the same height as the other filds in safari and ios if you dont choose a value */
+    min-height:calc(0.9em + (0.8em +2 )+ 0.6em) ; 
+    padding: 0.8em;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    outline:none;    
+    border: 1px solid #dddd;
+    border-radius: 4px;
+    background: #f9f9f9;
+    transition: background 0/25s, border-color 0.25, color 0.25;
+  }
+.form__input:focus {
+    background: #fff;
+  }
+.form__input::placeholder{
+    color: #bbb ;
+ }
+
+.form__input__small{
+  max-width: 250px;  
+}
+.guests{
+   padding-top: 25px;
+    padding-bottom: 30px;
+}
+.person-count{
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    margin-left: 10vw;
+    font-size: 19px;
+}
+.person{
+    margin-top: 10px;
+    padding: 25px;
+    
+    width: 25vw;
+}
+.counter{
+    display: flex;
+    flex-direction: row;
+   
+}
+.sm_count{
+    color: rgba(105, 103, 103, 0.867);
+    font-size: 14px;
+}
+.inc , .dec{
+    border-radius: 800px;
+    padding: 15px;
+    background-color: #7f835ccc;
+    
+    
+}
+.inc:hover , .dec:hover{
+    background-color: #7d88047e ;
+}
+.count-btn{
+    margin: 20px;
+}
+.num_of_ppl{
+    margin: 25px;
+    margin-top: 35px;
+}
+.lb-duration
+{   padding-top: 25px;
+    
+    font-size: 32px;
+    font-weight: 600;
+}
+.duration{
+    font-size: 19px;
+    padding: 12px;
+    margin-left:50px;
+    width: 10vw;
+    border-radius: 10px;
+    border-color: rgba(184, 183, 183, 0.867);
+}
+.duration__p{
+    padding-top: 25px;
+    padding-bottom:25px ;
+}
+.opt{
+    padding: 12px;
+    font-size: 19px;
+    
+}
+.persoal__details{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: row wrap;
+    justify-content:space-between;
+    flex-flow: row wrap;
+    width: fit-content;
+    max-width: 70vw;
+    
+
+}
+.bottomn__flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.Add_order{
+    
+    height: fit-content;
+    background-color: #7d8804;
+}
+.place__order{
+  height: fit-content;
+  transform: translate(0px,40px);
+ background-color: #7d8804;
+  
+}
+.place__order:hover, .Add_order:hover{
+    background-color: #7d88049f;
+}
+
+.order__sum{
+    background-color: #fff;
+    border: solid #dddd;
+    width: 30vw;
+    padding: 10px;
+    min-height: 100px;
+    height: fit-content;
+    border-radius: 10px;
+    transform: translate(0px,20px);
+}
+.order__summary_lb{
+    font-size: 19px;
+    font-weight: bold;
+    margin: 20px;
+}
+/*-----------------------------------Form validation------------------------------------*/
+.form__item small{
+    visibility: hidden;
+}
+/*.form__item.success input{
+ border-color: #2ecc71;
+ border-width: 2px;
+}*/
+.form__item.error input{
+    border-color: #e74c3c;
+    border-width: 2px;
+}
+
+.form__item.error small{
+    visibility: visible;
+    color: #e74c3c;
+    font-weight: bold;
+}
+#txt{
+    visibility: visible;
+    color: rgba(95, 93, 93, 0.867);
+    font-weight: bold;
+    
+}
+.fav_flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+.add_to_fav , .order_favourite{
+    height: fit-content;
+    background-color: #dc551bed;
+}
+.add_to_fav:hover , .order_favourite:hover{
+    background-color: #dc551b98;
+}
+.loyality {
+    background-color: #c1507bbd;
+}
+.loyality:hover{
+    height: fit-content;
+    background-color: #c1507b7a;
+}
+/*-----------------------------------------------------Donation options -----------------------------------*/
+.donate_us{
+    padding: 35px;
+    padding-left:5px;
+ display: flex;
+ flex-direction: column;
+ font-weight: 600;
+ font-size: 49px;
+}
+.donation_amounts{
+  background-color: #4d7e7aad;
+  color: #000;
+  font-weight: 300;
+  
+}
+.doncheck{
+  margin: 2px;
+  
+ 
+}
+.donflex{
+    width: 40vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-flow: row wrap;
+    align-items: center;
+    row-gap: 30px;
+    column-gap: 40px;
+    
+}
+.topdon_flex{
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+.payment_container{
+    width: fit-content;
+}
+.payment_container form .inputBox {
+    padding-right: 20px;
+    padding: 25px;
+}
+.payment_container form{
+    border: rgba(0, 0, 0, 0.231) solid;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 15px rgba(0,0,0,.1);
+    padding: 20px;
+    width: 600px;
+    
+}
+.payment_container form .inputBox span{
+    display: block;
+    color: #999;
+    padding-bottom: 5px;
+
+}
+.payment_container form .inputBox input,
+.payment_container form .inputBox select{
+    width: 100%;
+    padding: 10px;
+    border-radius:10px;    
+    color: #444;
+}
+.payment_container  form .flexbox{
+    display: flex;
+    gap: 15px;
+}
+.payment_container form .flexbox .inputBox {
+    flex:1 1 150px;
+}
+.payment_container form .submit-btn{
+    width: 100%;
+    background: linear-gradient(45deg,blueviolet,deeppink);
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.2 linear;
+    border-radius: 10px;
+    border:none ;
+    
+}
+.payment_container form .submit-btn:hover{
+    letter-spacing: 2px;
+    opacity: .8;
+}
+.inputBox.error input{
+    border-color: #e74c3c;    
+    border-width: 2px;
+}
+.inputBox input{
+ border-color: rgba(214, 212, 212, 0.564);
+}
+.inputBox  small{
+ visibility: hidden;
+}
+
+.inputBox.error small{
+    visibility: visible;
+    color: #e74c3c;
+    font-weight: bold;
+} 
+
+/*-------------------------------------------- Mobile Compatability----------------------------------------*/
+
+
+@media only screen and (max-device-width: 1172px ){
+
+   .payment_container{
+    transform: translate(0px,40px);
+   }
+
+}
+@media only screen and (max-device-width: 900px ){
+.form{
+    font-size: small;
+}
+.form__body{
+    max-width: 65vw;
+}
+.inc , .dec {
+    padding: 0.5em;
+    margin: 0.5em;
+    
+
+}
+.num_of_ppl{
+    padding: 0.3em;
+    margin: 0.3em;
+    transform: translate(0px,30px);
+}
+.person-count{
+    margin-left: 0.5em;
+}
+.person{
+    padding: 0.5em;
+}
+.lb-duration{
+ font-size: 1.5em;
+}
+
+}
+@media only screen and (max-device-width: 1000px ){
+.bottomn__flex{
+    display: block;
+}
+.order__sum{
+    margin-bottom: 35px;
+    width: 60vw;
+}
+.duration{
+    width: fit-content;
+    
+}
+.loyality{
+    transform: translate(0px,40px);
+}
+.order_favourite{
+    transform: translate(-290px , -102px);
+    min-width: fit-content;
+}
+.add_to_fav{
+    transform: translate(-330px , -102px);
+    min-width: fit-content;
+}
+.footer_logo{
+    height: 5em;
+}
+.footercols  ul li{
+    padding: 0.4em;
+} 
+footer{
+    padding-bottom:100px ;
+}
+.underline{
+    margin-top:12px ;
+}
+
+}
+@media only screen and (max-device-width: 800px ){
+    .order_favourite{
+        transform: translate(-370px , -100px);
+      
+    }
+    .add_to_fav{
+        transform: translate(-200px , -22px);
+        
+    }
+    .order__sum {
+       margin-top: 10px;
+    }
+   .order__summary_lb{
+     margin-top: 100px;
+   }
+    .fav_flex{
+        padding: 0;
+    }
+    .textbox-book  h1 {
+        font-size: 2em;
+        transform: translate(0px, 250px);
+        }
+        .logo{
+            height: 5em;
+        }
+        .hero-btn{
+            font-size: 1em;
+            transform: translate(0px, 200px);
+        }
+        .footer_logo{
+            height: 5em;
+        }
+        
+        
+        footer{
+            height: fit-content;
+        }
+}
+@media only screen and (max-device-width: 567px ){
+    .order__summary_lb{
+        margin-top: 150px;
+      }
+    .order_favourite{
+        transform: translate(-370px , -20px);
+      
+    }
+    .add_to_fav{
+        transform: translate(-200px , 60px);
+        
+    }
+    .place__order, .loyality {
+        padding: 0.5em;
+    }
+    .form__body{
+        margin-left: 2em;
+    }
+    .textbox-book  h1 {
+        font-size: 2em;
+        transform: translate(0px, 250px);
+        }
+        .logo{
+            height: 5em;
+        }
+        .hero-btn{
+            font-size: 1em;
+            transform: translate(0px, 200px);
+        }
+        .footer_logo{
+            height: 5em;
+        }
+        
+        
+        footer{
+            height: fit-content;
+        }
+      .textbox-book{
+        background: none;
+      }
+}
+@media only screen and (max-device-width: 390px ){
+    .form{
+        font-size: 14px;
+        width: 300px;
+    }
+    .num_of_ppl{
+        padding: 0.1em;
+        margin: 0.1em;
+        transform: translate(0px,30px);
+    }
+    .form__body{
+        max-width: 65vw;
+        margin-left: 0.75em;
+    }
+    .person{
+        padding: 0.3em;
+    }
+    .textbox-book  h1 {
+    font-size: 2em;
+    transform: translate(0px, 250px);
+    }
+    .logo{
+        height: 5em;
+    }
+    .hero-btn{
+        font-size: 1em;
+        transform: translate(0px, 200px);
+    }
+    
+    }
+
